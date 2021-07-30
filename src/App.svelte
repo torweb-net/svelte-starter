@@ -1,19 +1,21 @@
 <script>
+	//Import components
+	import Navigation from './components/Navigation.svelte'
+
 	//Props from main.js
-	export let csslibrary, preprocessor;
+	//export let csslibrary, preprocessor;
 </script>
 
 <main>
-	<h1>Svelte starter with {csslibrary} and {preprocessor}</h1>
+	<Navigation links={[
+		{to: "https://www.google.com", text: "Google"}, 
+		{to: "https://www.duckduckgo.com", text: "DuckDuckGo"},
+		{to: "https://www.yahoo.com", text: "Yahoo"},
+	]} />
 </main>
 
 <style lang="scss">
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+	@import './scss/variables.scss';
 
 	@media (min-width: 640px) {
 		main {
